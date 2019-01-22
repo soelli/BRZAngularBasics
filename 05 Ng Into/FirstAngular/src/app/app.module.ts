@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
@@ -17,7 +18,7 @@ import { ShoppingService } from "./shopping/shopping.service";
     SidebarComponent,
     MainComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule],
+  imports: [BrowserModule, BrowserAnimationsModule, FormsModule],
   providers: [ShoppingService],
   bootstrap: [AppComponent]
 })

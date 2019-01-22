@@ -1,4 +1,27 @@
-<div>Main Component</div>
-<button (click)="onClick()">Click me</button>
-<div>{{ name }}</div>
-<div>{{ items | json }}</div>
+<div>Shopping List</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{ item.name }}</td>
+      <td>{{ item.price | currency }}</td>
+      <td><button (click)="itemSelected(item)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="current">
+  <h4>Selected Item</h4>
+  <div><input type="text" placeholder="Name" [(ngModel)]="current.name" /></div>
+  <div>
+    <input type="number" placeholder="Preis" [(ngModel)]="current.price" />
+  </div>
+  <button (click)="saveItem()">Save</button>
+</div>

@@ -12,12 +12,18 @@ export class MainComponent implements OnInit {
 
   name: string = "Default Name";
   items: ShoppingItem[];
+  current: ShoppingItem;
 
   ngOnInit() {
     this.items = this.service.getItems();
   }
 
-  onClick() {
-    this.name = "The super name";
+  itemSelected(item) {
+    this.current = { ...item };
+  }
+
+  saveItem() {
+    let original = this.items.find(item => item.Id == this.current.Id);
+    original = Object.assign({}, this.current);
   }
 }

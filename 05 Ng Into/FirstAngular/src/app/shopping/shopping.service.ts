@@ -5,7 +5,10 @@ export class ShoppingService {
   constructor() {}
 
   getItems() {
-    let items = [{ name: "wurst", price: 12 }, { name: "brot", price: 4 }];
+    let items = [
+      { Id: 1, name: "wurst", price: 12 },
+      { Id: 2, name: "brot", price: 4 }
+    ];
 
     return items;
   }
