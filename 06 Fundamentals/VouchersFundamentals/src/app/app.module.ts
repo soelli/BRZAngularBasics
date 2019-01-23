@@ -44,6 +44,8 @@ import { ToEuroPipe } from "./demos/custom-pipes/to-euro.pipe";
 import { EuroDirective } from "./demos/custom-directives/euro.directive";
 registerLocaleData(localeDe);
 
+import { MatCardModule } from "@angular/material";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,7 +88,8 @@ registerLocaleData(localeDe);
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   // providers: [PersonService],
   providers: [PersonService, { provide: LOCALE_ID, useValue: "de" }],

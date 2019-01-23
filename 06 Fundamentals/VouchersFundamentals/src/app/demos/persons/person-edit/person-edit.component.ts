@@ -20,7 +20,7 @@ export class PersonEditComponent implements OnInit {
   @Input()
   edit: boolean;
   @Output()
-  savePerson: EventEmitter<Person> = new EventEmitter();
+  onPersonSave: EventEmitter<Person> = new EventEmitter();
 
   constructor() {}
 
@@ -29,7 +29,7 @@ export class PersonEditComponent implements OnInit {
   }
 
   doSave() {
-    this.savePerson.emit(this.person);
+    this.onPersonSave.emit(this.person);
   }
 
   doDelete() {

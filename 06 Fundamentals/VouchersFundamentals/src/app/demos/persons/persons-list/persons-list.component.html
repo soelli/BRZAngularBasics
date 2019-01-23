@@ -1,4 +1,4 @@
-<div>
+<mat-card>
   <table class="table">
     <thead>
       <tr>
@@ -9,11 +9,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let p of persons">
-        <td>{{p.name}}</td>
-        <td>{{p.gender}}</td>
-        <td>{{p.age}}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.gender }}</td>
+        <td>{{ p.age }}</td>
         <td><a (click)="selectPerson(p)">Select</a></td>
       </tr>
     </tbody>
   </table>
-</div>
+</mat-card>
