@@ -11,16 +11,18 @@ import { UploadComponent } from "./shared/upload/upload.component";
 import { VoucherResolver } from "./vouchers/voucher/voucher-resolver.service";
 import { AccountResolver } from "./accounts/account-resolver.service";
 
-import { NoSQLInterceptorComponent } from './demos/no-sqlinterceptor/no-sqlinterceptor.component';
-import { HttpClientsComponent } from './demos/http-clients/http-clients.component';
-import { PromiseComponent } from './demos/promise/promise.component';
-import { ObservableCrudComponent } from './demos/observable-crud/observable-crud.component';
+import { NoSQLInterceptorComponent } from "./demos/no-sqlinterceptor/no-sqlinterceptor.component";
+import { HttpClientsComponent } from "./demos/http-clients/http-clients.component";
+import { PromiseComponent } from "./demos/promise/promise.component";
+import { ObservableCrudComponent } from "./demos/observable-crud/observable-crud.component";
+import { CurrencyComponent } from "./demos/currency/currency.component";
 
 const appRoutes: Routes = [
   {
     path: "",
     component: DemosComponent,
     children: [
+      { path: "currency", component: CurrencyComponent },
       { path: "clients", component: HttpClientsComponent },
       { path: "promise", component: PromiseComponent },
       { path: "nosql", component: NoSQLInterceptorComponent },
@@ -34,7 +36,7 @@ const appRoutes: Routes = [
   {
     path: "vouchers/:id",
     component: VoucherComponent,
-    resolve: { voucher : VoucherResolver, accounts : AccountResolver}
+    resolve: { voucher: VoucherResolver, accounts: AccountResolver }
   },
   {
     path: "accounts",

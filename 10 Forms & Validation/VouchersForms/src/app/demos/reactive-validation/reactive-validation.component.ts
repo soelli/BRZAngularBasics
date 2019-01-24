@@ -1,4 +1,4 @@
-import { Observable } from "rxjs/Rx";
+// import { Observable } from "rxjs/Rx";
 import {
   FormControl,
   FormGroup,
@@ -8,6 +8,7 @@ import {
 import { Component, OnInit } from "@angular/core";
 import { ValidationErrors } from "@angular/forms/src/directives/validators";
 import { Person, WorkLifeBalance } from "../person";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-reactive-validation",

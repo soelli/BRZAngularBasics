@@ -10,6 +10,7 @@ import { DemoItem } from "./demoItem";
   providers: [DemoService]
 })
 export class DemosComponent implements OnInit {
+  //View Model
   title: string = "";
   demoName: string = "";
   componentName: string = "";

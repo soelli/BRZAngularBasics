@@ -35,6 +35,8 @@ export class ServicesComponent implements OnInit {
         console.log("Error received from jQuery: ", err);
       }
     });
+
+    console.log("line after call executed");
   }
 
   usingjQueryWithPromise() {

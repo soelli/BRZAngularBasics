@@ -32,14 +32,6 @@ namespace Vouchers.Api
             return vouchers;
         }
 
-        // http://localhost:PORT/api/vouchers/usingRepository 
-        [HttpGet]
-        [Route("usingRepository")]
-        public IEnumerable<Voucher> UsingRepository()
-        {
-            return rep.GetAllVouchers();
-        }
-
         // Get implemented using Task Pattern - should be default
         // http://localhost:PORT/api/vouchers/asyncArray        
         [HttpGet]
@@ -125,6 +117,15 @@ namespace Vouchers.Api
             }
             return Ok();
         }
+
+        // http://localhost:PORT/api/vouchers/usingRepository 
+        [HttpGet]
+        [Route("usingRepository")]
+        public IEnumerable<Voucher> UsingRepository()
+        {
+            return rep.GetAllVouchers();
+        }
+
 
         //Custom Routes
 

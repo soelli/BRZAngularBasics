@@ -17,6 +17,7 @@ import { ObservableCrudComponent } from "./observable-crud/observable-crud.compo
 import { NoSQLInterceptorComponent } from "./no-sqlinterceptor/no-sqlinterceptor.component";
 import { PromiseComponent } from "./promise/promise.component";
 import { FirebaseService } from "./firebase.service";
+import { CurrencyComponent } from './currency/currency.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { FirebaseService } from "./firebase.service";
     HttpClientsComponent,
     ObservableCrudComponent,
     NoSQLInterceptorComponent,
-    PromiseComponent
+    PromiseComponent,
+    CurrencyComponent
   ],
   providers: [DemoService, MovieService, PersonService, FirebaseService]
 })

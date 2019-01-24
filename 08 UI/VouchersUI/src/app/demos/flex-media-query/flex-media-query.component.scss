@@ -1,25 +1,23 @@
-
 article > * {
-    padding: 20px;
-    background-color: #cccccc;
-  }
-  article > div {
-    background-color: #dedede;
-  }
-  article footer {
-    background-color: #bbb; 
-  }
+  padding: 20px;
+  background-color: #cccccc;
+}
+article > div {
+  background-color: #dedede;
+}
+article footer {
+  background-color: #bbb;
+}
 
 /* Article Sample */
 
 article {
-    display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
-@media screen and (min-width: 600px){
-  article {   
+@media screen and (min-width: 600px) {
+  article {
     flex-direction: row;
   }
 
@@ -28,7 +26,7 @@ article {
   }
 
   aside {
-   order: -1;
+    order: -1;
   }
 
   article > div {
@@ -36,11 +34,11 @@ article {
   }
 
   footer {
-    background-color: #ccc; 
+    background-color: #ccc;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   article {
     flex-direction: column;
   }
